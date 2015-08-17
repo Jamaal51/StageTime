@@ -16,12 +16,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)createBitButtonTapped:(UIButton *)sender {
+    
+    // create a reference to Main.storyboard
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    // create a new instance of UIViewController from our storyboard
+    CreateBitViewController *createBitViewController = [storyboard instantiateViewControllerWithIdentifier:@"CreateBitIdentifier"]; //Storyboard ID assigned!!
+    
+//    createBitViewController.planetArray = [[NSMutableArray alloc]init]; // instantiate at another view from this view
+    
+//    [planetViewController.planetArray addObjectsFromArray:self.planets];
+    
+    // tell the UINavigationController to push the new view controller on to the stack
+    
+    [self.navigationController pushViewController:createBitViewController animated:YES];
+    
+    
 }
 
 @end

@@ -15,6 +15,10 @@
 		9A03F36A1B80E78400B06E1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A03F3681B80E78400B06E1D /* LaunchScreen.storyboard */; };
 		9A03F3751B80E78400B06E1D /* SetListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03F3741B80E78400B06E1D /* SetListTests.m */; };
 		9A03F3801B80E78400B06E1D /* SetListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03F37F1B80E78400B06E1D /* SetListUITests.m */; };
+		9A03F38F1B810EFE00B06E1D /* BitListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03F38E1B810EFE00B06E1D /* BitListTableViewController.m */; };
+		9A03F3921B81125500B06E1D /* CreateBitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03F3911B81125500B06E1D /* CreateBitViewController.m */; };
+		9A03F3951B811C8A00B06E1D /* SLBit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03F3941B811C8A00B06E1D /* SLBit.m */; };
+		9A03F3981B811CFB00B06E1D /* BitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A03F3971B811CFB00B06E1D /* BitModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,14 @@
 		9A03F37B1B80E78400B06E1D /* SetListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SetListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A03F37F1B80E78400B06E1D /* SetListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetListUITests.m; sourceTree = "<group>"; };
 		9A03F3811B80E78400B06E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A03F38D1B810EFE00B06E1D /* BitListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitListTableViewController.h; sourceTree = "<group>"; };
+		9A03F38E1B810EFE00B06E1D /* BitListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitListTableViewController.m; sourceTree = "<group>"; };
+		9A03F3901B81125500B06E1D /* CreateBitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateBitViewController.h; sourceTree = "<group>"; };
+		9A03F3911B81125500B06E1D /* CreateBitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateBitViewController.m; sourceTree = "<group>"; };
+		9A03F3931B811C8A00B06E1D /* SLBit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLBit.h; sourceTree = "<group>"; };
+		9A03F3941B811C8A00B06E1D /* SLBit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLBit.m; sourceTree = "<group>"; };
+		9A03F3961B811CFB00B06E1D /* BitModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitModel.h; sourceTree = "<group>"; };
+		9A03F3971B811CFB00B06E1D /* BitModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BitModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +115,17 @@
 			children = (
 				9A03F35D1B80E78300B06E1D /* AppDelegate.h */,
 				9A03F35E1B80E78300B06E1D /* AppDelegate.m */,
+				9A03F3631B80E78400B06E1D /* Main.storyboard */,
+				9A03F3961B811CFB00B06E1D /* BitModel.h */,
+				9A03F3971B811CFB00B06E1D /* BitModel.m */,
+				9A03F3931B811C8A00B06E1D /* SLBit.h */,
+				9A03F3941B811C8A00B06E1D /* SLBit.m */,
 				9A03F3601B80E78300B06E1D /* ViewController.h */,
 				9A03F3611B80E78300B06E1D /* ViewController.m */,
-				9A03F3631B80E78400B06E1D /* Main.storyboard */,
+				9A03F38D1B810EFE00B06E1D /* BitListTableViewController.h */,
+				9A03F38E1B810EFE00B06E1D /* BitListTableViewController.m */,
+				9A03F3901B81125500B06E1D /* CreateBitViewController.h */,
+				9A03F3911B81125500B06E1D /* CreateBitViewController.m */,
 				9A03F3661B80E78400B06E1D /* Assets.xcassets */,
 				9A03F3681B80E78400B06E1D /* LaunchScreen.storyboard */,
 				9A03F36B1B80E78400B06E1D /* Info.plist */,
@@ -270,7 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A03F3951B811C8A00B06E1D /* SLBit.m in Sources */,
+				9A03F3921B81125500B06E1D /* CreateBitViewController.m in Sources */,
+				9A03F3981B811CFB00B06E1D /* BitModel.m in Sources */,
 				9A03F3621B80E78300B06E1D /* ViewController.m in Sources */,
+				9A03F38F1B810EFE00B06E1D /* BitListTableViewController.m in Sources */,
 				9A03F35F1B80E78300B06E1D /* AppDelegate.m in Sources */,
 				9A03F35C1B80E78300B06E1D /* main.m in Sources */,
 			);
@@ -498,6 +522,7 @@
 				9A03F3861B80E78400B06E1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A03F3871B80E78400B06E1D /* Build configuration list for PBXNativeTarget "SetListTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +531,7 @@
 				9A03F3891B80E78400B06E1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A03F38A1B80E78400B06E1D /* Build configuration list for PBXNativeTarget "SetListUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +540,7 @@
 				9A03F38C1B80E78400B06E1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

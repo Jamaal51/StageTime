@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8Qx-X2-0KK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="3y3-eR-Gxo">
+            <objects>
+                <navigationController id="8Qx-X2-0KK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MdN-QS-Mmm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZKU-hz-ZvN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7En-2k-9Gq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-548" y="-22"/>
+        </scene>
+        <!--Home Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController title="Home Page" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +32,147 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="microphone" translatesAutoresizingMaskIntoConstraints="NO" id="wiA-sy-Pic">
+                                <rect key="frame" x="180" y="184" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="rTQ-Zo-8Se"/>
+                                    <constraint firstAttribute="width" constant="240" id="uSk-k2-Vht"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68k-YQ-05h">
+                                <rect key="frame" x="275" y="376" width="50" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Bit List"/>
+                                <connections>
+                                    <segue destination="ixv-8n-8yL" kind="show" id="6Pk-PE-nlO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQT-Zg-5Wg">
+                                <rect key="frame" x="264" y="424" width="72" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Create Bit"/>
+                                <connections>
+                                    <action selector="createBitButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bsv-mG-7E8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StageTime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gk5-PU-Unj">
+                                <rect key="frame" x="257" y="128" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wiA-sy-Pic" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="6dj-aT-cCq"/>
+                            <constraint firstItem="gk5-PU-Unj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="D1G-xk-PCZ"/>
+                            <constraint firstItem="mQT-Zg-5Wg" firstAttribute="top" secondItem="68k-YQ-05h" secondAttribute="bottom" constant="16" id="FLf-gJ-tMy"/>
+                            <constraint firstItem="68k-YQ-05h" firstAttribute="top" secondItem="wiA-sy-Pic" secondAttribute="bottom" constant="64" id="HG9-cC-HAD"/>
+                            <constraint firstItem="68k-YQ-05h" firstAttribute="centerX" secondItem="wiA-sy-Pic" secondAttribute="centerX" id="TjD-PF-Rfe"/>
+                            <constraint firstItem="mQT-Zg-5Wg" firstAttribute="centerX" secondItem="68k-YQ-05h" secondAttribute="centerX" id="UnW-wJ-8bH"/>
+                            <constraint firstItem="gk5-PU-Unj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mi5-fK-100"/>
+                            <constraint firstItem="wiA-sy-Pic" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ozd-gl-2E4"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="G3N-Sv-bgo"/>
+                    <connections>
+                        <outlet property="logoImageView" destination="wiA-sy-Pic" id="fN9-bK-phN"/>
+                        <outlet property="pushToCreateBit" destination="mQT-Zg-5Wg" id="QqX-CM-2Na"/>
+                        <outlet property="pushToList" destination="68k-YQ-05h" id="p1U-dk-h7r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="158" y="-22"/>
+        </scene>
+        <!--New Bit-->
+        <scene sceneID="2wa-3E-igV">
+            <objects>
+                <viewController storyboardIdentifier="CreateBitIdentifier" title="New Bit" id="tSs-5H-sMh" customClass="CreateBitViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6nN-jJ-R7v"/>
+                        <viewControllerLayoutGuide type="bottom" id="zQ6-Kg-aRr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q6v-O6-AWL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bit Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XHo-2e-un3">
+                                <rect key="frame" x="36" y="84" width="528" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Yb-8P-thU">
+                                <rect key="frame" x="36" y="146" width="528" height="390"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dx-Ai-ZsJ">
+                                <rect key="frame" x="270" y="548" width="60" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createBitTapped:" destination="tSs-5H-sMh" eventType="touchUpInside" id="Ap1-OG-1rc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XHo-2e-un3" firstAttribute="leading" secondItem="q6v-O6-AWL" secondAttribute="leadingMargin" constant="16" id="0XN-XX-cwF"/>
+                            <constraint firstItem="zQ6-Kg-aRr" firstAttribute="top" secondItem="3dx-Ai-ZsJ" secondAttribute="bottom" constant="16" id="82z-66-CJz"/>
+                            <constraint firstItem="zQ6-Kg-aRr" firstAttribute="top" secondItem="7Yb-8P-thU" secondAttribute="bottom" constant="64" id="FVd-gh-5UK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XHo-2e-un3" secondAttribute="trailing" constant="16" id="NaU-hM-KdD"/>
+                            <constraint firstItem="XHo-2e-un3" firstAttribute="centerX" secondItem="q6v-O6-AWL" secondAttribute="centerX" id="UXz-lf-LqN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Yb-8P-thU" secondAttribute="trailing" constant="16" id="WuW-xn-Tgv"/>
+                            <constraint firstItem="7Yb-8P-thU" firstAttribute="leading" secondItem="q6v-O6-AWL" secondAttribute="leadingMargin" constant="16" id="aBM-hH-OQe"/>
+                            <constraint firstItem="7Yb-8P-thU" firstAttribute="centerX" secondItem="q6v-O6-AWL" secondAttribute="centerX" id="jFM-9a-p7I"/>
+                            <constraint firstItem="XHo-2e-un3" firstAttribute="top" secondItem="6nN-jJ-R7v" secondAttribute="bottom" constant="64" id="lTR-bz-cq3"/>
+                            <constraint firstItem="3dx-Ai-ZsJ" firstAttribute="centerX" secondItem="q6v-O6-AWL" secondAttribute="centerX" id="nCk-Kd-onP"/>
+                            <constraint firstItem="7Yb-8P-thU" firstAttribute="top" secondItem="XHo-2e-un3" secondAttribute="bottom" constant="32" id="oYE-A3-WtM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bitNameTextField" destination="XHo-2e-un3" id="1W2-jt-VJA"/>
+                        <outlet property="bitTextView" destination="7Yb-8P-thU" id="iT0-7N-97z"/>
+                        <outlet property="createBitButton" destination="3dx-Ai-ZsJ" id="Jm7-oA-dEY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VGJ-dV-b7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="652"/>
+        </scene>
+        <!--Bit List-->
+        <scene sceneID="net-cV-ZE2">
+            <objects>
+                <tableViewController title="Bit List" id="ixv-8n-8yL" customClass="BitListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="MnO-QZ-kR9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BitListReuseIdentifier" id="9sb-08-jGw">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9sb-08-jGw" id="1Do-1y-tpU">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ixv-8n-8yL" id="RBQ-R8-WDY"/>
+                            <outlet property="delegate" destination="ixv-8n-8yL" id="Okd-ZC-4EY"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uOp-gW-E2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="-22"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="microphone" width="800" height="535"/>
+    </resources>
 </document>

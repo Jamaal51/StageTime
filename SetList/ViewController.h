@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BitListTableViewController.h"
+#import "CreateBitViewController.h"
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
+@property (weak, nonatomic) IBOutlet UIButton *pushToList;
+@property (weak, nonatomic) IBOutlet UIButton *pushToCreateBit;
 
 @end
 
